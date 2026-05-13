@@ -1,25 +1,14 @@
 package level1;
 
-import java.util.Scanner;
-import java.io.FileInputStream;
-
 public class problem_2027 {
-    public static void main(String args[]) throws Exception
-    {
-        Scanner sc = new Scanner(System.in);
-        int T;
-        T=sc.nextInt();
+    public static void main(String[] args){
 
-        for(int test_case = 1; test_case <= T; test_case++)
-        {
-            int sum = 0;
-            for(int i = 0; i<10; i++){
-                int num = sc.nextInt();
-
-                if(num%2 != 0) sum += num;
+        for(int i = 1; i<=5; i++){
+            for(int j = 1; j<=5; j++){
+                if(j==i) System.out.printf("%c",'#');
+                else System.out.printf("%c",'+');
             }
-            System.out.printf("#%d %d\n",test_case,sum);
+            System.out.println();
         }
     }
-
 }
